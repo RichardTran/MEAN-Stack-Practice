@@ -1,0 +1,19 @@
+{
+  "name": "mean-stack-practice",
+  "version": "0.0.0",
+  "description": "Practice project using MEAN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardTran/MEAN-Stack-Practice.git"
+  },
+  "author": "Richard Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RichardTran/MEAN-Stack-Practice/issues"
+  },
+  "homepage": "https://github.com/RichardTran/MEAN-Stack-Practice#readme"
+}
