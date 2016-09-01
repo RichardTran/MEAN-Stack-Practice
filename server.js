@@ -1,16 +1,8 @@
-var express = require('express');
+var express = require('./config/express');
 var app = express();
-
-app.use('/', function(req, res) {
-    res.send('Hello World');
-});
-
-app.get('/', function(req, res) {
-    res.send('Hello World2');
-});
-
-
 app.listen(process.env.PORT);
-console.log('Server running at http://localhost:3000/');
 
 module.exports = app;
+
+console.log('Server is running....');
+
