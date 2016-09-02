@@ -20,6 +20,7 @@ module.exports = function() {
     
     app.use(bodyParser.json());
     app.use(methodOverride());
+    
 
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
@@ -27,5 +28,8 @@ module.exports = function() {
     require('../app/routes/index.server.routes.js')(app);
     // var x = require(...)
     // x(app);
+    
+    app.use(express.static('./public'));
+    
     return app;
 };
