@@ -9,5 +9,5 @@ app.listen(process.env.PORT);
 
 module.exports = app;
 
-console.log('Server is running....');
+console.log('Server is running on: '+process.env.IP+":"+process.env.PORT);
 
