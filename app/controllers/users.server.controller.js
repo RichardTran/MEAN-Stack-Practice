@@ -33,6 +33,14 @@ exports.read = function(req, res){
 
 
 exports.update = function(req, res, next){
+	/* 
+	User.findOneByUserName('username', function(err, user){
+		...
+	}
+	*/
+	/*authenticate
+		user.authenticate('password');
+	*/
     User.findByIdAndUpdate(req.user.id, req.body, function(err, user){
         if(err){
             return next(err);
