@@ -8,10 +8,11 @@
     </head>
 
     <body>
-        <% if ( userFullName ) { %>
+        <% if ( userFullName && email  ) { %>
             <h2>Hello
                 <%=userFullName%>
             </h2>
+            <p> Your E-Mail is <%=email%> </p>
             <a href="/signout">Sign out</a>
             <% } else { %>
                 <a href="/signup">Signup</a>
