@@ -105,3 +105,12 @@ exports.saveOAuthUserProfile = function(req, profile, done) {
 		}
 	});
 };
+
+exports.requireLogin = function() {
+	if (!req.isAuthenticated()) {
+		return res.status(401).send({
+			message: 'User is not logged in'
+		});
+	}
+	next();
+};
