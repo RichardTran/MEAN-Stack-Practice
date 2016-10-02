@@ -49,4 +49,25 @@ exports.articleById = function(req, res, next, id){
 		req.article = article;
 		next();
 	});
-}
+};
+
+exports.read = function(req, req){
+	res.json(req.article);
+};
+
+exports.update = function(req, res){
+	var article = req.article;
+	article.title = req.body.title;
+	article.content = req.body.content;
+	article.save(function(err){
+		if(err){
+			return res.status(400).send({
+				message: getErrorMessage(err)	
+			});
+		}
+		else{
+			res.json(article);
+		}
+	});
+};
+
