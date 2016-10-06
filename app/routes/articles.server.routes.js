@@ -11,5 +11,5 @@ module.exports = function(app){
 		.put(users.requiresLogin, articles.hasAuthorization, articles.update)
 		.delete(users.requiresLogin, articles.hasAuthorization, articles.delete);
 		
-	app.param('articleId', articles.articleById);
+	app.param('articleId', articles.articleByID);
 };

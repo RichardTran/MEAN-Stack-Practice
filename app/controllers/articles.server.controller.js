@@ -42,7 +42,7 @@ exports.list = function(req, res) {
 	})
 };
 
-exports.articleById = function(req, res, next, id) {
+exports.articleByID = function(req, res, next, id) {
 	Article.findById(id).populate('creator', 'firstName lastName fullName').exec(function(err, article) {
 		if (err) {
 			return next(err);
@@ -55,7 +55,7 @@ exports.articleById = function(req, res, next, id) {
 	});
 };
 
-exports.read = function(req, req) {
+exports.read = function(req, res) {
 	res.json(req.article);
 };
 
